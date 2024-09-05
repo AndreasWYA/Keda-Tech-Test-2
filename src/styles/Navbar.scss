@@ -1,0 +1,133 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 40px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'SUSE', sans-serif;
+
+  .logo {
+    font-size: 2rem; 
+    font-weight: bold;
+    color: #0088cc; 
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+        margin: 0 25px;
+        
+            a {
+                text-decoration: none;
+                color: #000; 
+                font-weight: 800;
+                font-size: 32px; 
+
+                &:hover {
+                color: #0088cc; 
+                }
+            }
+        }
+    }
+
+    .login-btn {
+        background-color: transparent;
+        color: #0088cc; 
+        border: 2px solid #0088cc; 
+        padding: 10px 80px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 18px; 
+        font-weight: 500;
+        transition: all 0.3s ease;
+        margin-left: 50px;
+
+        &:hover {
+        background-color: #0088cc; 
+        color: #fff; 
+        }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        padding: 10px 20px;
+
+        .logo {
+            font-size: 1.5rem; 
+        }
+
+        .nav-container{
+            .nav-links {
+                li {
+                    margin: 0 10px;
+    
+                    a {
+                    font-size: 1.5rem; 
+                    }
+                }
+            }
+    
+            .login-btn {
+                padding: 20px 15px;
+                font-size: 1rem;
+            }
+        }
+        
+    }
+}
+
+
+  @media (max-width: 480px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        // padding: 10px 15px;
+
+        .logo {
+            font-size: 1.5rem; 
+            padding: 10px 0
+        }
+        
+        .nav-container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 0;
+
+                li {
+                    margin: 10px 0;
+
+                    a {
+                    font-size: 1.5rem;
+                    padding: 0;
+                    }
+                }
+            }
+
+            .login-btn {
+                width: 100%;
+                font-size: 1.2rem;
+                padding: 10px;
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+    }
+  }
